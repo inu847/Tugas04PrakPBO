@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class LuasPermukaan{
     public void tabung(){
-        System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===");
+        System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===\n");
         Scanner scanner = new Scanner(System.in);
 
         double phi = 3.14, luas;
@@ -71,20 +71,20 @@ class Volume{
     }
 
     public void tabung(){
-        System.out.println("=== MENGHITUNG VOLUME TABUNG ===");
+        System.out.println("\n=== MENGHITUNG VOLUME TABUNG ===\n");
         Scanner scanner = new Scanner(System.in);
 
         double V ,phi = 3.14, r , t;
 
-        System.out.println("Masukkan Jari-Jari : ");
+        System.out.print("Masukkan Jari-Jari : ");
         r = scanner.nextInt();
 
-        System.out.println("Masukkan Tinggi Tabung : ");
+        System.out.print("Masukkan Tinggi Tabung : ");
         t = scanner.nextInt();
 
         V = phi * r * r * t;
 
-        System.out.println("Volume Tabung = " + V);
+        System.out.println("Volume Tabung : " + V);
     }
 
     public void kubus(){
