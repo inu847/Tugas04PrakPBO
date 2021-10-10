@@ -160,16 +160,63 @@ class Volume{
     }
 }
 
-<<<<<<< HEAD
-class Main{
-=======
 class MainTigad{
->>>>>>> 641c473c0e8d459e9892a39108fcc80031de4bd6
     public static void main(String[] args) {
-        LuasPermukaan luasPermukaan = new LuasPermukaan();
-        luasPermukaan.balok();
+        System.out.println("=====================================");
+        System.out.println("=\tOperasi Aritmatika Tiga Dimensi\t=");
+        System.out.println("=====================================");
+        System.out.println("1. Luas Permukaan Balok ");
+        System.out.println("2. Luas Permukaan Tabung");
+        System.out.println("3. Luas Permukaan Kubus");
+        System.out.println("4. Luas Permukaan Bola");
+        System.out.println("5. Luas Permukaan Prisma");
 
+        System.out.println("6. Volume Balok ");
+        System.out.println("7. Volume Tabung");
+        System.out.println("8. Volume Kubus");
+        System.out.println("9. Volume Bola");
+        System.out.println("10. Volume Prisma");
+
+        System.out.print("Chose Options : ");
+
+        LuasPermukaan luasPermukaan = new LuasPermukaan();
         Volume volume = new Volume();
-        volume.balok();
+
+        int option;
+        Scanner scanner = new Scanner(System.in);
+        option = scanner.nextInt();
+
+        switch (option){
+            case 1:
+                luasPermukaan.balok();
+                break;
+            case 2:
+                luasPermukaan.tabung();
+                break;
+            case 3:
+                luasPermukaan.kubus();
+                break;
+            case 4:
+                luasPermukaan.bola();
+                break;
+            case 5:
+                luasPermukaan.prisma();
+                break;
+            case 6:
+                volume.balok();
+                break;
+            case 7:
+                volume.tabung();
+                break;
+            case 8:
+                volume.kubus();
+                break;
+            case 9:
+                volume.bola();
+                break;
+            case 10:
+                volume.prisma();
+                break;
+        }
     }
 }
