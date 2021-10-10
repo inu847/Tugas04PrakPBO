@@ -16,14 +16,18 @@ public class Kubus {
     public static void main(String[] args){
         Scanner input = new Scanner (System.in);   
 
-      int sisi;
-      int Volume;
+      double sisi, volume, permukaan;
       System.out.println("Menghitung Volume Kubus");
+      System.out.println("========================================");
       System.out.print("Masukkan sisi : ");
       sisi = input.nextInt();
 
-      Volume = sisi*sisi*sisi;
-
-      System.out.println("Volume Kubus = " + Volume);
+      volume = sisi*sisi*sisi;
+      permukaan = sisi * sisi * 6;
+      
+      
+      System.out.println("========================================");
+      System.out.println("Volume Kubus = " + volume);
+      System.out.println("Luas Permukaan Kubus Adalah = " + permukaan);
     }
 }

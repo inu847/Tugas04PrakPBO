@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Balok {
     public static void main(String[] args) throws Exception {
             Scanner input = new Scanner(System.in);
-            int panjang, lebar, tinggi, hasil;
+            double panjang, lebar, tinggi, hasil, volume;
             System.out.println("Program Menghitung Luas Balok");
             System.out.println("=============================");
 
@@ -27,8 +27,11 @@ public class Balok {
             tinggi = input.nextInt();
 
             hasil =  2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
-
+            volume = panjang * lebar * tinggi;
+            
+            System.out.println("====================================");
             System.out.println("Luas Balok tersebut adalah: " + hasil);
+            System.out.println("Volume Balok Tersebut adalah " + volume);
 
 
         }
