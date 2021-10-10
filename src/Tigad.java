@@ -19,9 +19,22 @@ public class LuasPermukaan{
 
         System.out.print("luas Lingkaran : " + luas);
     }
-}
 
-public class Volume{
+    public void kubus(){
+        Scanner input = new Scanner (System.in);
+
+        double sisi, volume, permukaan;
+        sisi = input.nextInt();
+
+        volume = sisi*sisi*sisi;
+        permukaan = sisi * sisi * 6;
+
+
+        System.out.println("========================================");
+        System.out.println("Volume Kubus = " + volume);
+        System.out.println("Luas Permukaan Kubus Adalah = " + permukaan);
+    }
+
     public void balok(){
         Scanner input = new Scanner(System.in);
         int panjang, lebar, tinggi, hasil;
@@ -38,6 +51,27 @@ public class Volume{
         hasil =  2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
 
         System.out.println("Luas Balok tersebut adalah: " + hasil);
+    }
+}
+
+public class Volume{
+    public void balok(){
+        Scanner input = new Scanner(System.in);
+        double panjang, lebar, tinggi, volume;
+        System.out.println("Program Menghitung Luas Balok");
+        System.out.println("=============================");
+
+        System.out.print("Masukan Panjang Balok: ");
+        panjang = input.nextInt();
+        System.out.print("Masukan Lebar balok: ");
+        lebar = input.nextInt();
+        System.out.print("Masukan Tinggi Balok: ");
+        tinggi = input.nextInt();
+
+        volume = panjang * lebar * tinggi;
+
+        System.out.println("====================================");
+        System.out.println("Volume Balok Tersebut adalah " + volume);
     }
 
     public void tabung(){
