@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
-public class LuasPermukaan{
-    public void balok(){
-        System.out.println("Balok");
-    }
-
+class LuasPermukaan{
     public void tabung(){
         System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===");
         Scanner scanner = new Scanner(System.in);
@@ -54,7 +50,7 @@ public class LuasPermukaan{
     }
 }
 
-public class Volume{
+class Volume{
     public void balok(){
         Scanner input = new Scanner(System.in);
         double panjang, lebar, tinggi, volume;
@@ -106,7 +102,7 @@ public class Volume{
     }
 }
 
-class Main(){
+class MainTigad{
     public static void main(String[] args) {
         LuasPermukaan luasPermukaan = new LuasPermukaan();
         luasPermukaan.balok();

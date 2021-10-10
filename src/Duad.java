@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Luas {
+class Luas {
     public void persegi(Double p, Double l, Double t){
         System.out.println("Luas Persegi");
     }
@@ -29,7 +29,7 @@ public class Luas {
     }
 }
 
-public class Keliling{
+class Keliling{
     public void persegi(Double p, Double l, Double t){
         System.out.println("Keliling Persegi");
     }
