@@ -48,6 +48,36 @@ class LuasPermukaan{
 
         System.out.println("Luas Balok tersebut adalah: " + hasil);
     }
+
+    public void bola()
+    {
+        System.out.print("Masukkan jari-jari bola : ");
+        Scanner input = new Scanner(System.in);
+        float jari = input.nextFloat();
+        System.out.println("Luas Permukaan Bola adalah " + jari*jari*22/7*4);
+    }
+
+    public void prisma() {
+        Scanner userInput = new Scanner(System.in);
+
+        float La, Ka, tinggi, luasP, volume;
+
+        System.out.println("Luas Permukaan & Volume Prisma Segitiga");
+        System.out.println("========================================");
+
+        System.out.print("Masukkan Luas Alas     : ");
+        La = userInput.nextFloat();
+
+        System.out.print("Masukkan Keliling Alas : ");
+        Ka = userInput.nextFloat();
+
+        System.out.print("Masukkan Tinggi        : ");
+        tinggi = userInput.nextFloat();
+
+        System.out.println("======================================");
+        luasP = (2 * La) + (Ka * tinggi);
+        System.out.println("Luas Permukaannya  : " + luasP);
+    }
 }
 
 class Volume{
@@ -99,6 +129,34 @@ class Volume{
         Volume = sisi*sisi*sisi;
 
         System.out.println("Volume Kubus = " + Volume);
+    }
+
+    public void bola()
+    {
+        System.out.print("Masukkan jari-jari bola : ");
+        Scanner input = new Scanner(System.in);
+        float jari = input.nextFloat();
+        System.out.println("Luas Permukaan Bola adalah " + jari*jari*22/7*4);
+    }
+
+    public void prisma() {
+        Scanner userInput = new Scanner(System.in);
+
+        float La, tinggi, volume;
+
+        System.out.println("Luas Permukaan & Volume Prisma Segitiga");
+        System.out.println("========================================");
+
+        System.out.print("Masukkan Luas Alas     : ");
+        La = userInput.nextFloat();
+
+        System.out.print("Masukkan Keliling Alas : ");
+
+        System.out.print("Masukkan Tinggi        : ");
+        tinggi = userInput.nextFloat();
+
+        volume = La * tinggi;
+        System.out.println("Volumenya          : " + volume);
     }
 }
 
