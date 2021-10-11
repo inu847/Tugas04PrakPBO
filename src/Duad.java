@@ -2,7 +2,9 @@
 import java.util.Scanner;
 
 // Class luas
-// KONSEP INHERITANCE
+// KONSEP INHERITANCE terdapat pada class Luas yang menjadikan class MainDuad untuk induk/superclass dari class Luas
+// (Pewarisan) Inheritance atau Pewarisan/Penurunan adalah konsep pemrograman
+// dimana sebuah class dapat 'menurunkan' property dan method yang dimilikinya kepada class lain.
 class Luas extends MainDuad{
     public void persegi(){
         System.out.println("=== LUAS PERSEGI ===");
@@ -69,6 +71,9 @@ class Luas extends MainDuad{
 }
 
 // KONSEP POLYMORPHISM
+// sebuah konsep OOP di mana class memiliki banyak “bentuk” method yang berbeda,
+// meskipun namanya sama. Maksud dari “bentuk” adalah isinya yang berbeda,
+// namun tipe data dan parameternya berbeda
 class Keliling{
     public void persegi(){
         System.out.println("=== KELILING PERSEGI ===");
@@ -102,6 +107,9 @@ class Keliling{
     }
 
 //    KONSEP INTERFACE
+//    suatu mekanisme yang disediakan oleh java yang memungkinkan berbagi konstanta atau
+//    menentukan bentuk metode yang dapat digunakan oleh
+//    sejumlah kelas bentuk metode yang dapat digunakan oleh sejumlah kelas.
     public void segitiga(){
         System.out.println("Segitiga Sama Sisi");
         segitigaSamaSisi();
@@ -153,6 +161,9 @@ class Keliling{
     }
 }
 
+// Class yang mana tempat program dijalankan untuk pertama kali
+// karena didalam class MainDuad terdapat void main yang defaultnya
+// program dijalankan pertama kali
 class MainDuad{
     public static void main(String[] args) {
         System.out.println("=====================================");
@@ -169,9 +180,12 @@ class MainDuad{
         System.out.println("8. Keliling Lingkaran");
         System.out.print("Chose Options : ");
 
+//        Pemanggilan Construktor dari class diatas
         Luas luas = new Luas();
         Keliling keliling = new Keliling();
 
+//        Membuat inputan yang digunakan untuk pemilihan opsi
+//        dengan menggunakan switch case
         int option;
         Scanner scanner = new Scanner(System.in);
         option = scanner.nextInt();

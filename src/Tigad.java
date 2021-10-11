@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 // Class Luas Permukaan
-// KONSEP INHERITANCE
+// KONSEP INHERITANCE terdapat pada class luaspermukaan yang menjadikan class maintigad untuk induk/superclass dari class LuasPermukaan
+// (Pewarisan) Inheritance atau Pewarisan/Penurunan adalah konsep pemrograman
+// dimana sebuah class dapat 'menurunkan' property dan method yang dimilikinya kepada class lain.
 class LuasPermukaan extends MainTigad{
     public void tabung(){
         System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===\n");
@@ -118,6 +120,9 @@ class LuasPermukaan extends MainTigad{
 }
 
 // KONSEP POLYMORPHISM
+// sebuah konsep OOP di mana class memiliki banyak “bentuk” method yang berbeda,
+// meskipun namanya sama. Maksud dari “bentuk” adalah isinya yang berbeda,
+// namun tipe data dan parameternya berbeda
 class Volume{
     public void balok(){
         Scanner input = new Scanner(System.in);
@@ -230,6 +235,9 @@ class Volume{
     }
 }
 
+// Class yang mana tempat program dijalankan untuk pertama kali
+// karena didalam class MainTigad terdapat void main yang defaultnya
+// program dijalankan pertama kali
 class MainTigad{
     public static void main(String[] args) {
         System.out.println("=====================================");
@@ -252,9 +260,12 @@ class MainTigad{
         System.out.println("14. Volume Limas Segiempat");
         System.out.print("Chose Options : ");
 
+//        Pemanggilan Construktor dari class diatas
         LuasPermukaan luasPermukaan = new LuasPermukaan();
         Volume volume = new Volume();
 
+//        Membuat inputan yang digunakan untuk pemilihan opsi
+//        dengan menggunakan switch case
         int option;
         Scanner scanner = new Scanner(System.in);
         option = scanner.nextInt();
