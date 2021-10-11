@@ -106,7 +106,7 @@ public class Volume{
     }
 }
 
-class Main(){
+class Main{
     public static void main(String[] args) {
         LuasPermukaan luasPermukaan = new LuasPermukaan();
         luasPermukaan.balok();
