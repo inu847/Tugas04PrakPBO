@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
-public class LuasPermukaan{
-    public void balok(){
-        System.out.println("Balok");
-    }
-
+class LuasPermukaan{
     public void tabung(){
         System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===\n");
         Scanner scanner = new Scanner(System.in);
@@ -52,9 +48,39 @@ public class LuasPermukaan{
 
         System.out.println("Luas Balok tersebut adalah: " + hasil);
     }
+
+    public void bola()
+    {
+        System.out.print("Masukkan jari-jari bola : ");
+        Scanner input = new Scanner(System.in);
+        float jari = input.nextFloat();
+        System.out.println("Luas Permukaan Bola adalah " + jari*jari*22/7*4);
+    }
+
+    public void prisma() {
+        Scanner userInput = new Scanner(System.in);
+
+        float La, Ka, tinggi, luasP, volume;
+
+        System.out.println("Luas Permukaan & Volume Prisma Segitiga");
+        System.out.println("========================================");
+
+        System.out.print("Masukkan Luas Alas     : ");
+        La = userInput.nextFloat();
+
+        System.out.print("Masukkan Keliling Alas : ");
+        Ka = userInput.nextFloat();
+
+        System.out.print("Masukkan Tinggi        : ");
+        tinggi = userInput.nextFloat();
+
+        System.out.println("======================================");
+        luasP = (2 * La) + (Ka * tinggi);
+        System.out.println("Luas Permukaannya  : " + luasP);
+    }
 }
 
-public class Volume{
+class Volume{
     public void balok(){
         Scanner input = new Scanner(System.in);
         double panjang, lebar, tinggi, volume;
@@ -104,9 +130,41 @@ public class Volume{
 
         System.out.println("Volume Kubus = " + Volume);
     }
+
+    public void bola()
+    {
+        System.out.print("Masukkan jari-jari bola : ");
+        Scanner input = new Scanner(System.in);
+        float jari = input.nextFloat();
+        System.out.println("Luas Permukaan Bola adalah " + jari*jari*22/7*4);
+    }
+
+    public void prisma() {
+        Scanner userInput = new Scanner(System.in);
+
+        float La, tinggi, volume;
+
+        System.out.println("Luas Permukaan & Volume Prisma Segitiga");
+        System.out.println("========================================");
+
+        System.out.print("Masukkan Luas Alas     : ");
+        La = userInput.nextFloat();
+
+        System.out.print("Masukkan Keliling Alas : ");
+
+        System.out.print("Masukkan Tinggi        : ");
+        tinggi = userInput.nextFloat();
+
+        volume = La * tinggi;
+        System.out.println("Volumenya          : " + volume);
+    }
 }
 
+<<<<<<< HEAD
 class Main{
+=======
+class MainTigad{
+>>>>>>> 641c473c0e8d459e9892a39108fcc80031de4bd6
     public static void main(String[] args) {
         LuasPermukaan luasPermukaan = new LuasPermukaan();
         luasPermukaan.balok();
