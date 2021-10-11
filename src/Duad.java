@@ -1,5 +1,8 @@
+// Import Scanner untuk input data
 import java.util.Scanner;
 
+// Class luas
+// KONSEP INHERITANCE
 class Luas extends MainDuad{
     public void persegi(){
         System.out.println("=== LUAS PERSEGI ===");
@@ -65,6 +68,7 @@ class Luas extends MainDuad{
     }
 }
 
+// KONSEP POLYMORPHISM
 class Keliling{
     public void persegi(){
         System.out.println("=== KELILING PERSEGI ===");
@@ -97,8 +101,30 @@ class Keliling{
         System.out.println("Keliling Persegi Panjang : " + kel);
     }
 
+//    KONSEP INTERFACE
     public void segitiga(){
-        System.out.println("=== KELILING SEGITIGA ===");
+        System.out.println("Segitiga Sama Sisi");
+        segitigaSamaSisi();
+        System.out.println("Segitiga Sama Kaki");
+        segitigaSamaKaki();
+    }
+
+    private void segitigaSamaSisi(){
+        System.out.println("=== KELILING SEGITIGA Sama Sisi===");
+        Scanner scanner = new Scanner(System.in);
+
+        double s, kel;
+
+        System.out.print("Masukkan Panjang Sisi Segitiga : ");
+        s = scanner.nextInt();
+
+        kel = 3 * s;
+
+        System.out.println("Keliling Segitiga : "+kel);
+    }
+
+    private void segitigaSamaKaki(){
+        System.out.println("=== KELILING SEGITIGA Sama Kaki===");
         Scanner scanner = new Scanner(System.in);
 
         double s, kel;

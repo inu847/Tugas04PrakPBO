@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-class LuasPermukaan{
+// Class Luas Permukaan
+// KONSEP INHERITANCE
+class LuasPermukaan extends MainTigad{
     public void tabung(){
         System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===\n");
         Scanner scanner = new Scanner(System.in);
@@ -78,8 +80,44 @@ class LuasPermukaan{
         luasP = (2 * La) + (Ka * tinggi);
         System.out.println("Luas Permukaannya  : " + luasP);
     }
+
+    public void luaspermukaanlimassegiempat(){
+        Scanner scanner = new Scanner(System.in);
+
+        double s, a, t, l;
+
+        System.out.print("Masukkan Sisi : ");
+        s = scanner.nextInt();
+
+        System.out.print("Masukkan Luas Alas : ");
+        a = scanner.nextInt();
+
+        System.out.print("Masukkan Tinggi : ");
+        t = scanner.nextInt();
+
+        l = (s * s) + (4 * 0.5 * a * t) ;
+
+        System.out.println("Luas Permukaan Limas Segiempat : " + l);
+    }
+
+    void luaspermukaanlimassegitiga() {
+        Scanner scanner = new Scanner(System.in);
+
+        double la, ls, lp;
+
+        System.out.print("Masukkan Luas Alas : ");
+        la = scanner.nextInt();
+
+        System.out.print("Masukkan Sisi Tegak : ");
+        ls = scanner.nextInt();
+
+        lp = la + (3 * ls );
+
+        System.out.println("Luas Permukaan Limas Segiempat : " + lp);
+    }
 }
 
+// KONSEP POLYMORPHISM
 class Volume{
     public void balok(){
         Scanner input = new Scanner(System.in);
@@ -158,6 +196,38 @@ class Volume{
         volume = La * tinggi;
         System.out.println("Volumenya          : " + volume);
     }
+
+    public void vollimassegiempat(){
+        Scanner scanner = new Scanner(System.in);
+
+        double la, t, vol;
+
+        System.out.print("Masukkan Luas Alas : ");
+        la = scanner.nextInt();
+
+        System.out.print("Masukkan Tinggi Limas : ");
+        t = scanner.nextInt();
+
+        vol = 0.33 * la * t;
+
+        System.out.println("Volume Limas Segiempat : " + vol);
+    }
+
+    public void vollimassegitiga(){
+        Scanner scanner = new Scanner(System.in);
+
+        double la,t,vol;
+
+        System.out.print("Masukkan Luas Alas Limas Segitiga : ");
+        la = scanner.nextInt();
+
+        System.out.print("Masukkan Tinggi Limas Segitiga : ");
+        t = scanner.nextInt();
+
+        vol = 0.33 * la * t;
+
+        System.out.println("Volume Limas Segitiga : " + vol);
+    }
 }
 
 class MainTigad{
@@ -176,7 +246,10 @@ class MainTigad{
         System.out.println("8. Volume Kubus");
         System.out.println("9. Volume Bola");
         System.out.println("10. Volume Prisma");
-
+        System.out.println("11. Luas Permukaan Limas Segitiga");
+        System.out.println("12. Luas Permukaan Limas Segiempat");
+        System.out.println("13. Volume Limas Segitiga");
+        System.out.println("14. Volume Limas Segiempat");
         System.out.print("Chose Options : ");
 
         LuasPermukaan luasPermukaan = new LuasPermukaan();
@@ -216,6 +289,18 @@ class MainTigad{
                 break;
             case 10:
                 volume.prisma();
+                break;
+            case 11:
+                luasPermukaan.luaspermukaanlimassegiempat();
+                break;
+            case 12:
+                luasPermukaan.luaspermukaanlimassegitiga();
+                break;
+            case 13:
+                volume.vollimassegiempat();
+                break;
+            case 14:
+                volume.vollimassegitiga();
                 break;
         }
     }
