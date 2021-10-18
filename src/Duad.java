@@ -38,6 +38,7 @@ class Luas extends MainDuad{
         return luas;
     }
 
+//    Luas segitiga sama sisi dan sama kaki
     public double segitiga(double a, double t){
         System.out.println("=== LUAS SEGITIGA ===");
 //        Scanner scanner = new Scanner(System.in);

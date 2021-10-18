@@ -22,11 +22,6 @@ public class GUI extends JFrame{
         btnHitung.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
-                double tftinggi = Double.parseDouble(tinggi.getText());
-                double tflebar = Double.parseDouble(lebar.getText());
-
 //                double results;
 //                hasil.setText(String.valueOf(results));
 
@@ -36,11 +31,18 @@ public class GUI extends JFrame{
                 }else if(ops == 'PERSEGI'){
                     double tfsisi = Double.parseDouble(sisi.getText());
                 }else if(ops == 'PERSEGI PANJANG'){
-                    double tftinggi = Double.parseDouble(tinggi.getText());
+                    double tfpanjang = Double.parseDouble(panjang.getText());
+                    double tflebar = Double.parseDouble(lebar.getText());
                 }else if(ops == 'SEGITIGA SAMA SISI'){
-
+//                    double tftinggi = Double.parseDouble(tinggi.getText());
+//                    Keliling
+                    double tfsisi = Double.parseDouble(sisi.getText());
                 }else if(ops == 'SEGITIGA SAMA KAKI'){
-
+//                    Luas
+                    
+//                    double tftinggi = Double.parseDouble(tinggi.getText());
+//                    Keliling
+                    double tfsisi = Double.parseDouble(sisi.getText());
                 }
                 System.out.print(ops);
             }
