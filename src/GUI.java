@@ -16,6 +16,7 @@ public class GUI extends JFrame{
     private JTextField hasil;
     private JButton btnBatal;
     private JTextField panjang;
+    private JTextField alas;
 
 
     public GUI() {
