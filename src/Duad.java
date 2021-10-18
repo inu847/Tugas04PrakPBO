@@ -123,7 +123,7 @@ class Keliling{
 //        segitigaSamaKaki();
 //    }
 
-    private double segitigaSamaSisi(double s){
+    public double segitigaSamaSisi(double s){
         System.out.println("=== KELILING SEGITIGA Sama Sisi===");
 //        Scanner scanner = new Scanner(System.in);
 
@@ -138,7 +138,7 @@ class Keliling{
         return kel;
     }
 
-    private double segitigaSamaKaki(double s){
+    public double segitigaSamaKaki(double s){
         System.out.println("=== KELILING SEGITIGA Sama Kaki===");
 //        Scanner scanner = new Scanner(System.in);
 
@@ -164,7 +164,7 @@ class Keliling{
 
         kel = 2*phi*r;
 
-        System.out.println("Luas Lingkaran : " + kel);
+        System.out.println("Keliling Lingkaran : " + kel);
         return kel;
     }
 }

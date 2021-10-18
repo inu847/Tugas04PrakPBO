@@ -16,35 +16,100 @@ public class GUI extends JFrame{
     private JTextField hasil;
     private JButton btnBatal;
     private JTextField panjang;
+    private JTextField alas;
 
 
     public GUI() {
         btnHitung.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                double results;
-//                hasil.setText(String.valueOf(results));
+                double result = 0;
+                Luas luas = new Luas();
+                Keliling keliling = new Keliling();
 
                 String ops = String.valueOf(comboBox1.getSelectedItem());
-                if (ops == 'LINGKARAN') {
-                    double tfjari = Double.parseDouble(jari.getText());
-                }else if(ops == 'PERSEGI'){
-                    double tfsisi = Double.parseDouble(sisi.getText());
-                }else if(ops == 'PERSEGI PANJANG'){
-                    double tfpanjang = Double.parseDouble(panjang.getText());
-                    double tflebar = Double.parseDouble(lebar.getText());
-                }else if(ops == 'SEGITIGA SAMA SISI'){
-//                    double tftinggi = Double.parseDouble(tinggi.getText());
-//                    Keliling
-                    double tfsisi = Double.parseDouble(sisi.getText());
-                }else if(ops == 'SEGITIGA SAMA KAKI'){
+                if (ops == "LINGKARAN") {
+//                    Luas & Keliling Lingkaran
+                    double jari2 = Double.parseDouble(jari.getText());
+                    if (luasRadioButton.isSelected()){
+                        result = luas.lingkaran(jari2);
+                    }else if(kelilingRadioButton.isSelected()){
+                        result = keliling.lingkaran(jari2);
+                    }
+                }else if(ops == "PERSEGI"){
+//                    Luas & Keliling Persegi
+                    double sis = Double.parseDouble(sisi.getText());
+                    if (luasRadioButton.isSelected()){
+                        result = luas.persegi(sis);
+                    }else if(kelilingRadioButton.isSelected()){
+                        result = keliling.persegi(sis);
+                    }
+                }else if(ops == "PERSEGI PANJANG"){
+//                    Luas & Keliling
+                    double pjg = Double.parseDouble(panjang.getText());
+                    double lbr = Double.parseDouble(lebar.getText());
+                    if (luasRadioButton.isSelected()){
+                        result = luas.persegiPanjang(pjg, lbr);
+                    }else if(kelilingRadioButton.isSelected()){
+                        result = keliling.persegiPanjang(pjg, lbr);
+                    }
+                }else if(ops == "SEGITIGA SAMA SISI"){
 //                    Luas
-                    
-//                    double tftinggi = Double.parseDouble(tinggi.getText());
+                    double als = Double.parseDouble(alas.getText());
+                    double tng = Double.parseDouble(tinggi.getText());
 //                    Keliling
-                    double tfsisi = Double.parseDouble(sisi.getText());
+                    double sis = Double.parseDouble(sisi.getText());
+                    if (luasRadioButton.isSelected()){
+                        result = luas.segitiga(als, tng);
+                    }else if(kelilingRadioButton.isSelected()){
+                        result = keliling.segitigaSamaSisi(sis);
+                    }
+                }else if(ops == "SEGITIGA SAMA KAKI"){
+//                    Luas
+                    double als = Double.parseDouble(alas.getText());
+                    double tng = Double.parseDouble(tinggi.getText());
+//                    Keliling
+                    double sis = Double.parseDouble(sisi.getText());
+                    if (luasRadioButton.isSelected()){
+                        result = luas.segitiga(als, tng);
+                    }else if(kelilingRadioButton.isSelected()){
+                        result = keliling.segitigaSamaKaki(sis);
+                    }
                 }
-                System.out.print(ops);
+
+                hasil.setText(String.valueOf(result));
+            }
+        });
+
+        comboBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String ops = String.valueOf(comboBox1.getSelectedItem());
+
+                if (ops == "LINGKARAN") {
+                    sisi.setEditable(false);
+                    tinggi.setEditable(false);
+                    lebar.setEditable(false);
+                    panjang.setEditable(false);
+                    alas.setEditable(false);
+                }else if(ops == "PERSEGI"){
+                    jari.setEditable(false);
+                    tinggi.setEditable(false);
+                    lebar.setEditable(false);
+                    panjang.setEditable(false);
+                    alas.setEditable(false);
+                }else if(ops == "PERSEGI PANJANG"){
+                    lebar.setEditable(false);
+                    panjang.setEditable(false);
+                }else if(ops == "SEGITIGA SAMA SISI"){
+                    jari.setEditable(false);
+                    lebar.setEditable(false);
+                    panjang.setEditable(false);
+                }else if(ops == "SEGITIGA SAMA KAKI"){
+                    jari.setEditable(false);
+                    lebar.setEditable(false);
+                    panjang.setEditable(false);
+                }
             }
         });
     }
