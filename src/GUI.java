@@ -84,6 +84,12 @@ public class GUI extends JFrame{
         comboBox1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                sisi.setEditable(true);
+                tinggi.setEditable(true);
+                lebar.setEditable(true);
+                panjang.setEditable(true);
+                alas.setEditable(true);
+                jari.setEditable(true);
                 String ops = String.valueOf(comboBox1.getSelectedItem());
 
                 if (ops == "LINGKARAN") {
