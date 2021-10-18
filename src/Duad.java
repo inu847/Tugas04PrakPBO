@@ -6,67 +6,70 @@ import java.util.Scanner;
 // (Pewarisan) Inheritance atau Pewarisan/Penurunan adalah konsep pemrograman
 // dimana sebuah class dapat 'menurunkan' property dan method yang dimilikinya kepada class lain.
 class Luas extends MainDuad{
-    public void persegi(){
+    public double persegi(double sisi){
         System.out.println("=== LUAS PERSEGI ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
         double s, luas ;
 
-        System.out.print("Masukkan Sisi Persegi : ");
-        s = scanner.nextInt();
-
-        luas = s * s ;
+//        System.out.print("Masukkan Sisi Persegi : ");
+//        s = scanner.nextInt();
+        luas = sisi * sisi ;
 
         System.out.println("Luas Persegi : " + luas);
+        return luas;
     }
 
-    public void persegiPanjang(){
+    public double persegiPanjang(Double p, Double l){
         System.out.println("=== LUAS PERSEGI PANJANG ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double p, l, luas;
+        double luas;
 
-        System.out.print("Masukkan Panjang Persegi Panjang: ");
-        p = scanner.nextInt();
-
-        System.out.print("Masukkan Lebar Persegi Panjang:");
-        l = scanner.nextInt();
+//        System.out.print("Masukkan Panjang Persegi Panjang: ");
+//        p = scanner.nextInt();
+//
+//        System.out.print("Masukkan Lebar Persegi Panjang:");
+//        l = scanner.nextInt();
 
         luas = p * l;
 
         System.out.print("Luas Persegi Panjang : "+luas);
+        return luas;
     }
 
-    public void segitiga(){
+    public double segitiga(double a, double t){
         System.out.println("=== LUAS SEGITIGA ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double a, t, luas;
+        double luas;
 
-        System.out.print("Masukkan Alas Segitiga : ");
-        a = scanner.nextInt();
+//        System.out.print("Masukkan Alas Segitiga : ");
+//        a = scanner.nextInt();
 
-        System.out.print("Masukkan Tinggi Segitiga : ");
-        t = scanner.nextInt();
+//        System.out.print("Masukkan Tinggi Segitiga : ");
+//        t = scanner.nextInt();
 
         luas = 0.5 * a * t;
 
         System.out.println("Luas Segitiga : " + luas);
+        return luas;
     }
 
-    public void lingkaran(){
+    public double lingkaran(double r){
         System.out.println("\n=== MENGHITUNG LUAS LINGKARAN ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
         double phi = 3.14, luas;
-        int r;
+//        int r;
 
-        System.out.print("Masukkan Jari-Jari : ");
-        r = scanner.nextInt();
+//        System.out.print("Masukkan Jari-Jari : ");
+//        r = scanner.nextInt();
 
         luas = phi * r * r;
 
         System.out.print("luas Lingkaran : " + luas);
+        return luas;
     }
 }
 
@@ -75,94 +78,98 @@ class Luas extends MainDuad{
 // meskipun namanya sama. Maksud dari “bentuk” adalah isinya yang berbeda,
 // namun tipe data dan parameternya berbeda
 class Keliling{
-    public void persegi(){
+    public double persegi(double s){
         System.out.println("=== KELILING PERSEGI ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double s, kel ;
+        double kel;
 
-        System.out.print("Masukkan Sisi Persegi : ");
-        s = scanner.nextInt();
+//        System.out.print("Masukkan Sisi Persegi : ");
+//        s = scanner.nextInt();
 
         kel = s * s * s * s;
 
         System.out.println("Keliling Persegi : " + kel);
+        return kel;
     }
 
-    public void persegiPanjang(){
+    public double persegiPanjang(double p, double l){
         System.out.println("\n=== KELILING PERSEGI PANJANG ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double p, l, kel;
+        double kel;
 
-        System.out.print("Masukkan Panjang Persegi Panjang : ");
-        p = scanner.nextInt();
-
-        System.out.print("Masukkan Lebar Persegi Panjang: ");
-        l = scanner.nextInt();
+//        System.out.print("Masukkan Panjang Persegi Panjang : ");
+//        p = scanner.nextInt();
+//
+//        System.out.print("Masukkan Lebar Persegi Panjang: ");
+//        l = scanner.nextInt();
 
         kel = 2 * p + l;
 
         System.out.println("Keliling Persegi Panjang : " + kel);
+        return kel;
     }
 
 //    KONSEP INTERFACE
 //    suatu mekanisme yang disediakan oleh java yang memungkinkan berbagi konstanta atau
 //    menentukan bentuk metode yang dapat digunakan oleh
 //    sejumlah kelas bentuk metode yang dapat digunakan oleh sejumlah kelas.
-    public void segitiga(){
-        System.out.println("Segitiga Sama Sisi");
-        segitigaSamaSisi();
-        System.out.println("Segitiga Sama Kaki");
-        segitigaSamaKaki();
-    }
+//    public double segitiga(){
+//        System.out.println("Segitiga Sama Sisi");
+//        segitigaSamaSisi();
+//        System.out.println("Segitiga Sama Kaki");
+//        segitigaSamaKaki();
+//    }
 
-    private void segitigaSamaSisi(){
+    private double segitigaSamaSisi(double s){
         System.out.println("=== KELILING SEGITIGA Sama Sisi===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double s, kel;
+        double kel;
 
-        System.out.print("Masukkan Panjang Sisi Segitiga : ");
-        s = scanner.nextInt();
+//        System.out.print("Masukkan Panjang Sisi Segitiga : ");
+//        s = scanner.nextInt();
 
         kel = 3 * s;
 
         System.out.println("Keliling Segitiga : "+kel);
+        return kel;
     }
 
-    private void segitigaSamaKaki(){
+    private double segitigaSamaKaki(double s){
         System.out.println("=== KELILING SEGITIGA Sama Kaki===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double s, kel;
+        double kel;
 
-        System.out.print("Masukkan Panjang Sisi Segitiga : ");
-        s = scanner.nextInt();
+//        System.out.print("Masukkan Panjang Sisi Segitiga : ");
+//        s = scanner.nextInt();
 
         kel = 3 * s;
 
         System.out.println("Keliling Segitiga : "+kel);
+        return kel;
     }
 
-    public void lingkaran(){
+    public double lingkaran(double r){
         System.out.println("\n\n=== MENGHITUNG KELILING LINGKARAN ===");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double phi = 3.14, keliling;
-        int r;
+        double phi = 3.14, kel;
 
-        System.out.print("Masukkan Jari-Jari : ");
-        r = scanner.nextInt();
+//        System.out.print("Masukkan Jari-Jari : ");
+//        r = scanner.nextInt();
 
-        keliling = 2*phi*r;
+        kel = 2*phi*r;
 
-        System.out.println("Luas Lingkaran : " + keliling);
+        System.out.println("Luas Lingkaran : " + kel);
+        return kel;
     }
 }
 
 // Class yang mana tempat program dijalankan untuk pertama kali
-// karena didalam class MainDuad terdapat void main yang defaultnya
+// karena didalam class MainDuad terdapat double main yang defaultnya
 // program dijalankan pertama kali
 class MainDuad{
     public static void main(String[] args) {
@@ -190,31 +197,31 @@ class MainDuad{
         Scanner scanner = new Scanner(System.in);
         option = scanner.nextInt();
 
-        switch (option){
-            case 1:
-                luas.persegi();
-                break;
-            case 2:
-                luas.persegiPanjang();
-                break;
-            case 3:
-                luas.segitiga();
-                break;
-            case 4:
-                luas.lingkaran();
-                break;
-            case 5:
-                keliling.persegi();
-                break;
-            case 6:
-                keliling.persegiPanjang();
-                break;
-            case 7:
-                keliling.segitiga();
-                break;
-            case 8:
-                keliling.lingkaran();
-                break;
-        }
+//        switch (option){
+//            case 1:
+//                luas.persegi();
+//                break;
+//            case 2:
+//                luas.persegiPanjang();
+//                break;
+//            case 3:
+//                luas.segitiga();
+//                break;
+//            case 4:
+//                luas.lingkaran();
+//                break;
+//            case 5:
+//                keliling.persegi();
+//                break;
+//            case 6:
+//                keliling.persegiPanjang();
+//                break;
+//            case 7:
+//                keliling.segitiga();
+//                break;
+//            case 8:
+//                keliling.lingkaran();
+//                break;
+//        }
     }
 }

@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TigaDForm {
     private JTextField textField1;
@@ -13,6 +15,15 @@ public class TigaDForm {
     private JComboBox comboBox1;
     private JRadioButton VOLUMERadioButton;
     private JRadioButton LUASPERMUKAANRadioButton;
+
+    public TigaDForm() {
+        HITUNGButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("TigaDForm");

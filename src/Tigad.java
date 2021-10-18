@@ -5,117 +5,121 @@ import java.util.Scanner;
 // (Pewarisan) Inheritance atau Pewarisan/Penurunan adalah konsep pemrograman
 // dimana sebuah class dapat 'menurunkan' property dan method yang dimilikinya kepada class lain.
 class LuasPermukaan extends MainTigad{
-    public void tabung(){
+    public double tabung(double r){
         System.out.println("\n=== MENGHITUNG LUAS PERMUKAAN ===\n");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
         double phi = 3.14, luas;
-        int r;
 
-        System.out.print("Masukkan Jari-Jari : ");
-        r = scanner.nextInt();
+//        System.out.print("Masukkan Jari-Jari : ");
+//        r = scanner.nextInt();
 
         luas = phi * r * r;
 
         System.out.print("luas Lingkaran : " + luas);
+        return luas;
     }
 
-    public void kubus(){
-        Scanner input = new Scanner (System.in);
+    public double kubus(double sisi){
+//        Scanner input = new Scanner (System.in);
 
-        double sisi, volume, permukaan;
-        sisi = input.nextInt();
+        double permukaan;
+//        sisi = input.nextInt();
 
-        volume = sisi*sisi*sisi;
         permukaan = sisi * sisi * 6;
 
-
         System.out.println("========================================");
-        System.out.println("Volume Kubus = " + volume);
         System.out.println("Luas Permukaan Kubus Adalah = " + permukaan);
+        return permukaan;
     }
 
-    public void balok(){
-        Scanner input = new Scanner(System.in);
-        int panjang, lebar, tinggi, hasil;
+    public double balok(double panjang, double lebar, double tinggi){
+//        Scanner input = new Scanner(System.in);
+        double hasil;
         System.out.println("Program Menghitung Luas Balok");
         System.out.println("=============================");
 
-        System.out.print("Masukan Panjang Balok: ");
-        panjang = input.nextInt();
-        System.out.print("Masukan Lebar balok: ");
-        lebar = input.nextInt();
-        System.out.print("Masukan Tinggi Balok: ");
-        tinggi = input.nextInt();
+//        System.out.print("Masukan Panjang Balok: ");
+//        panjang = input.nextInt();
+//        System.out.print("Masukan Lebar balok: ");
+//        lebar = input.nextInt();
+//        System.out.print("Masukan Tinggi Balok: ");
+//        tinggi = input.nextInt();
 
         hasil =  2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
 
         System.out.println("Luas Balok tersebut adalah: " + hasil);
+        return hasil;
     }
 
-    public void bola()
+    public double bola(double jari)
     {
-        System.out.print("Masukkan jari-jari bola : ");
-        Scanner input = new Scanner(System.in);
-        float jari = input.nextFloat();
-        System.out.println("Luas Permukaan Bola adalah " + jari*jari*22/7*4);
+//        System.out.print("Masukkan jari-jari bola : ");
+//        Scanner input = new Scanner(System.in);
+//        float jari = input.nextFloat();
+        double hasil = jari*jari*22/7*4;
+        System.out.println("Luas Permukaan Bola adalah " + hasil);
+        return hasil;
     }
 
-    public void prisma() {
-        Scanner userInput = new Scanner(System.in);
+    public double prisma(double La, double Ka, double tinggi) {
+//        Scanner userInput = new Scanner(System.in);
 
-        float La, Ka, tinggi, luasP, volume;
+        double luasP;
 
         System.out.println("Luas Permukaan & Volume Prisma Segitiga");
         System.out.println("========================================");
 
-        System.out.print("Masukkan Luas Alas     : ");
-        La = userInput.nextFloat();
-
-        System.out.print("Masukkan Keliling Alas : ");
-        Ka = userInput.nextFloat();
-
-        System.out.print("Masukkan Tinggi        : ");
-        tinggi = userInput.nextFloat();
+//        System.out.print("Masukkan Luas Alas     : ");
+//        La = userInput.nextFloat();
+//
+//        System.out.print("Masukkan Keliling Alas : ");
+//        Ka = userInput.nextFloat();
+//
+//        System.out.print("Masukkan Tinggi        : ");
+//        tinggi = userInput.nextFloat();
 
         System.out.println("======================================");
         luasP = (2 * La) + (Ka * tinggi);
         System.out.println("Luas Permukaannya  : " + luasP);
+        return luasP;
     }
 
-    public void luaspermukaanlimassegiempat(){
-        Scanner scanner = new Scanner(System.in);
+    public double luaspermukaanlimassegiempat(double s, double a, double t){
+//        Scanner scanner = new Scanner(System.in);
 
-        double s, a, t, l;
+        double l;
 
-        System.out.print("Masukkan Sisi : ");
-        s = scanner.nextInt();
-
-        System.out.print("Masukkan Luas Alas : ");
-        a = scanner.nextInt();
-
-        System.out.print("Masukkan Tinggi : ");
-        t = scanner.nextInt();
+//        System.out.print("Masukkan Sisi : ");
+//        s = scanner.nextInt();
+//
+//        System.out.print("Masukkan Luas Alas : ");
+//        a = scanner.nextInt();
+//
+//        System.out.print("Masukkan Tinggi : ");
+//        t = scanner.nextInt();
 
         l = (s * s) + (4 * 0.5 * a * t) ;
 
         System.out.println("Luas Permukaan Limas Segiempat : " + l);
+        return l;
     }
 
-    void luaspermukaanlimassegitiga() {
-        Scanner scanner = new Scanner(System.in);
+    double luaspermukaanlimassegitiga(double la, double ls) {
+//        Scanner scanner = new Scanner(System.in);
 
-        double la, ls, lp;
+        double lp;
 
-        System.out.print("Masukkan Luas Alas : ");
-        la = scanner.nextInt();
-
-        System.out.print("Masukkan Sisi Tegak : ");
-        ls = scanner.nextInt();
+//        System.out.print("Masukkan Luas Alas : ");
+//        la = scanner.nextInt();
+//
+//        System.out.print("Masukkan Sisi Tegak : ");
+//        ls = scanner.nextInt();
 
         lp = la + (3 * ls );
 
         System.out.println("Luas Permukaan Limas Segiempat : " + lp);
+        return lp;
     }
 }
 
@@ -124,119 +128,126 @@ class LuasPermukaan extends MainTigad{
 // meskipun namanya sama. Maksud dari “bentuk” adalah isinya yang berbeda,
 // namun tipe data dan parameternya berbeda
 class Volume{
-    public void balok(){
-        Scanner input = new Scanner(System.in);
-        double panjang, lebar, tinggi, volume;
+    public double balok(double panjang, double lebar, double tinggi){
+//        Scanner input = new Scanner(System.in);
+        double volume;
         System.out.println("Program Menghitung Luas Balok");
         System.out.println("=============================");
 
-        System.out.print("Masukan Panjang Balok: ");
-        panjang = input.nextInt();
-        System.out.print("Masukan Lebar balok: ");
-        lebar = input.nextInt();
-        System.out.print("Masukan Tinggi Balok: ");
-        tinggi = input.nextInt();
+//        System.out.print("Masukan Panjang Balok: ");
+//        panjang = input.nextInt();
+//        System.out.print("Masukan Lebar balok: ");
+//        lebar = input.nextInt();
+//        System.out.print("Masukan Tinggi Balok: ");
+//        tinggi = input.nextInt();
 
         volume = panjang * lebar * tinggi;
 
         System.out.println("====================================");
         System.out.println("Volume Balok Tersebut adalah " + volume);
+        return volume;
     }
 
-    public void tabung(){
+    public double tabung(double r , double t){
         System.out.println("\n=== MENGHITUNG VOLUME TABUNG ===\n");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
-        double V ,phi = 3.14, r , t;
+        double V ,phi = 3.14;
 
-        System.out.print("Masukkan Jari-Jari : ");
-        r = scanner.nextInt();
-
-        System.out.print("Masukkan Tinggi Tabung : ");
-        t = scanner.nextInt();
+//        System.out.print("Masukkan Jari-Jari : ");
+//        r = scanner.nextInt();
+//
+//        System.out.print("Masukkan Tinggi Tabung : ");
+//        t = scanner.nextInt();
 
         V = phi * r * r * t;
 
         System.out.println("Volume Tabung : " + V);
+        return V;
     }
 
-    public void kubus(){
-        Scanner input = new Scanner (System.in);
+    public double kubus(double sisi){
+//        Scanner input = new Scanner (System.in);
 
-        int sisi;
-        int Volume;
+        double Volume;
         System.out.println("Menghitung Volume Kubus");
-        System.out.print("Masukkan sisi : ");
-        sisi = input.nextInt();
+//        System.out.print("Masukkan sisi : ");
+//        sisi = input.nextInt();
 
         Volume = sisi*sisi*sisi;
 
         System.out.println("Volume Kubus = " + Volume);
+        return Volume;
     }
 
-    public void bola()
+    public double bola(double jari)
     {
-        System.out.print("Masukkan jari-jari bola : ");
-        Scanner input = new Scanner(System.in);
-        float jari = input.nextFloat();
-        System.out.println("Luas Permukaan Bola adalah " + jari*jari*22/7*4);
+//        System.out.print("Masukkan jari-jari bola : ");
+//        Scanner input = new Scanner(System.in);
+//        float jari = input.nextFloat();
+        double hasil = jari*jari*22/7*4;
+        System.out.println("Luas Permukaan Bola adalah " + hasil);
+        return hasil;
     }
 
-    public void prisma() {
-        Scanner userInput = new Scanner(System.in);
+    public double prisma(double La, double tinggi) {
+//        Scanner userInput = new Scanner(System.in);
 
-        float La, tinggi, volume;
+        double volume;
 
         System.out.println("Luas Permukaan & Volume Prisma Segitiga");
         System.out.println("========================================");
 
-        System.out.print("Masukkan Luas Alas     : ");
-        La = userInput.nextFloat();
-
-        System.out.print("Masukkan Keliling Alas : ");
-
-        System.out.print("Masukkan Tinggi        : ");
-        tinggi = userInput.nextFloat();
+//        System.out.print("Masukkan Luas Alas     : ");
+//        La = userInput.nextFloat();
+//
+//        System.out.print("Masukkan Keliling Alas : ");
+//
+//        System.out.print("Masukkan Tinggi        : ");
+//        tinggi = userInput.nextFloat();
 
         volume = La * tinggi;
-        System.out.println("Volumenya          : " + volume);
+        System.out.println("Volumenya\t: " + volume);
+        return volume;
     }
 
-    public void vollimassegiempat(){
-        Scanner scanner = new Scanner(System.in);
+    public double vollimassegiempat(double la, double t){
+//        Scanner scanner = new Scanner(System.in);
 
-        double la, t, vol;
+        double vol;
 
-        System.out.print("Masukkan Luas Alas : ");
-        la = scanner.nextInt();
-
-        System.out.print("Masukkan Tinggi Limas : ");
-        t = scanner.nextInt();
+//        System.out.print("Masukkan Luas Alas : ");
+//        la = scanner.nextInt();
+//
+//        System.out.print("Masukkan Tinggi Limas : ");
+//        t = scanner.nextInt();
 
         vol = 0.33 * la * t;
 
         System.out.println("Volume Limas Segiempat : " + vol);
+        return vol;
     }
 
-    public void vollimassegitiga(){
-        Scanner scanner = new Scanner(System.in);
+    public double vollimassegitiga(double la, double t){
+//        Scanner scanner = new Scanner(System.in);
 
-        double la,t,vol;
+        double vol;
 
-        System.out.print("Masukkan Luas Alas Limas Segitiga : ");
-        la = scanner.nextInt();
-
-        System.out.print("Masukkan Tinggi Limas Segitiga : ");
-        t = scanner.nextInt();
+//        System.out.print("Masukkan Luas Alas Limas Segitiga : ");
+//        la = scanner.nextInt();
+//
+//        System.out.print("Masukkan Tinggi Limas Segitiga : ");
+//        t = scanner.nextInt();
 
         vol = 0.33 * la * t;
 
         System.out.println("Volume Limas Segitiga : " + vol);
+        return vol;
     }
 }
 
 // Class yang mana tempat program dijalankan untuk pertama kali
-// karena didalam class MainTigad terdapat void main yang defaultnya
+// karena didalam class MainTigad terdapat double main yang defaultnya
 // program dijalankan pertama kali
 class MainTigad{
     public static void main(String[] args) {
@@ -261,58 +272,58 @@ class MainTigad{
         System.out.print("Chose Options : ");
 
 //        Pemanggilan Construktor dari class diatas
-        LuasPermukaan luasPermukaan = new LuasPermukaan();
-        Volume volume = new Volume();
+//        LuasPermukaan luasPermukaan = new LuasPermukaan();
+//        Volume volume = new Volume();
 
 //        Membuat inputan yang digunakan untuk pemilihan opsi
 //        dengan menggunakan switch case
-        int option;
-        Scanner scanner = new Scanner(System.in);
-        option = scanner.nextInt();
-
-        switch (option){
-            case 1:
-                luasPermukaan.balok();
-                break;
-            case 2:
-                luasPermukaan.tabung();
-                break;
-            case 3:
-                luasPermukaan.kubus();
-                break;
-            case 4:
-                luasPermukaan.bola();
-                break;
-            case 5:
-                luasPermukaan.prisma();
-                break;
-            case 6:
-                volume.balok();
-                break;
-            case 7:
-                volume.tabung();
-                break;
-            case 8:
-                volume.kubus();
-                break;
-            case 9:
-                volume.bola();
-                break;
-            case 10:
-                volume.prisma();
-                break;
-            case 11:
-                luasPermukaan.luaspermukaanlimassegiempat();
-                break;
-            case 12:
-                luasPermukaan.luaspermukaanlimassegitiga();
-                break;
-            case 13:
-                volume.vollimassegiempat();
-                break;
-            case 14:
-                volume.vollimassegitiga();
-                break;
-        }
+//        int option;
+//        Scanner scanner = new Scanner(System.in);
+//        option = scanner.nextInt();
+//
+//        switch (option){
+//            case 1:
+//                luasPermukaan.balok();
+//                break;
+//            case 2:
+//                luasPermukaan.tabung();
+//                break;
+//            case 3:
+//                luasPermukaan.kubus();
+//                break;
+//            case 4:
+//                luasPermukaan.bola();
+//                break;
+//            case 5:
+//                luasPermukaan.prisma();
+//                break;
+//            case 6:
+//                volume.balok();
+//                break;
+//            case 7:
+//                volume.tabung();
+//                break;
+//            case 8:
+//                volume.kubus();
+//                break;
+//            case 9:
+//                volume.bola();
+//                break;
+//            case 10:
+//                volume.prisma();
+//                break;
+//            case 11:
+//                luasPermukaan.luaspermukaanlimassegiempat();
+//                break;
+//            case 12:
+//                luasPermukaan.luaspermukaanlimassegitiga();
+//                break;
+//            case 13:
+//                volume.vollimassegiempat();
+//                break;
+//            case 14:
+//                volume.vollimassegitiga();
+//                break;
+//        }
     }
 }
