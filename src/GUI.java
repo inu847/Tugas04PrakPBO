@@ -105,8 +105,10 @@ public class GUI extends JFrame{
                     panjang.setEditable(false);
                     alas.setEditable(false);
                 }else if(ops == "PERSEGI PANJANG"){
-                    lebar.setEditable(false);
-                    panjang.setEditable(false);
+                    jari.setEditable(false);
+                    tinggi.setEditable(false);
+                    alas.setEditable(false);
+                    sisi.setEditable(false);
                 }else if(ops == "SEGITIGA SAMA SISI"){
                     jari.setEditable(false);
                     lebar.setEditable(false);
@@ -116,6 +118,12 @@ public class GUI extends JFrame{
                     lebar.setEditable(false);
                     panjang.setEditable(false);
                 }
+            }
+        });
+        btnKeluar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
     }
