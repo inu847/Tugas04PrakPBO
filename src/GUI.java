@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class GUI extends JFrame{
     private JPanel mainGui;
@@ -124,6 +126,16 @@ public class GUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+        mainGui.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                sisi.setEditable(false);
+                tinggi.setEditable(false);
+                lebar.setEditable(false);
+                panjang.setEditable(false);
+                alas.setEditable(false);
             }
         });
     }
