@@ -3,10 +3,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TigaDForm {
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
+    private JTextField tfpanjang;
+    private JTextField tflebar;
+    private JTextField tftinggi;
+    private JTextField tfjari;
     private JTextField textField5;
     private JButton HITUNGButton;
     private JButton BATALButton;
@@ -21,6 +21,12 @@ public class TigaDForm {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+        KELUAR.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
     }
