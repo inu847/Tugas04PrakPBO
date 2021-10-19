@@ -10,7 +10,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="d6fab" class="javax.swing.JLabel">
+      <component id="d6fab" class="javax.swing.JLabel" binding="masukkanPanjang">
         <constraints>
           <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -20,7 +20,7 @@
           <text value="MASUKKAN PANJANG"/>
         </properties>
       </component>
-      <component id="6b2d1" class="javax.swing.JLabel">
+      <component id="6b2d1" class="javax.swing.JLabel" binding="masukkanLebar">
         <constraints>
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -30,7 +30,7 @@
           <text value="MASUKKAN LEBAR"/>
         </properties>
       </component>
-      <component id="a3c1" class="javax.swing.JLabel">
+      <component id="a3c1" class="javax.swing.JLabel" binding="masukkanTinggi">
         <constraints>
           <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -40,7 +40,7 @@
           <text value="MASUKKAN TINGGI"/>
         </properties>
       </component>
-      <component id="fefc0" class="javax.swing.JLabel">
+      <component id="fefc0" class="javax.swing.JLabel" binding="masukkanJari">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -63,18 +63,6 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="6540a" class="javax.swing.JTextField" binding="tftinggi">
-        <constraints>
-          <grid row="9" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-9536887"/>
-          <font style="1"/>
-          <foreground color="-1773058"/>
-        </properties>
-      </component>
       <component id="d3ddc" class="javax.swing.JTextField" binding="tfjari">
         <constraints>
           <grid row="10" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -87,7 +75,7 @@
           <foreground color="-1773058"/>
         </properties>
       </component>
-      <component id="c3ff2" class="javax.swing.JRadioButton" binding="VOLUMERadioButton" default-binding="true">
+      <component id="c3ff2" class="javax.swing.JRadioButton" binding="VolRadioButton">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -97,7 +85,7 @@
           <text value="VOLUME"/>
         </properties>
       </component>
-      <component id="69e8a" class="javax.swing.JRadioButton" binding="LUASPERMUKAANRadioButton" default-binding="true">
+      <component id="69e8a" class="javax.swing.JRadioButton" binding="lpButton">
         <constraints>
           <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -107,7 +95,7 @@
           <text value="LUAS PERMUKAAN"/>
         </properties>
       </component>
-      <component id="f59a7" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="f59a7" class="javax.swing.JTextField" binding="tfhasil">
         <constraints>
           <grid row="15" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -163,7 +151,7 @@
           <text value="HASIL"/>
         </properties>
       </component>
-      <component id="e74f3" class="javax.swing.JButton" binding="HITUNGButton" default-binding="true">
+      <component id="e74f3" class="javax.swing.JButton" binding="hitung">
         <constraints>
           <grid row="14" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -173,7 +161,7 @@
           <text value="HITUNG"/>
         </properties>
       </component>
-      <component id="52db9" class="javax.swing.JButton" binding="BATALButton" default-binding="true">
+      <component id="52db9" class="javax.swing.JButton" binding="BatalButton">
         <constraints>
           <grid row="14" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -275,52 +263,76 @@
           <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="3623b" class="javax.swing.JTextField" binding="tfSisi">
+      <component id="3623b" class="javax.swing.JTextField" binding="tfsisi">
         <constraints>
           <grid row="11" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-9536887"/>
+        </properties>
       </component>
-      <component id="ba4f9" class="javax.swing.JLabel" binding="sisi">
+      <component id="ba4f9" class="javax.swing.JLabel" binding="masukkansisi">
         <constraints>
           <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-12828863"/>
+          <foreground color="-1249039"/>
           <text value="MASUKKAN SISI/SISI TEGAK"/>
         </properties>
       </component>
-      <component id="7fa69" class="javax.swing.JTextField" binding="tfLA">
+      <component id="7fa69" class="javax.swing.JTextField" binding="tfla">
         <constraints>
           <grid row="12" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-9536887"/>
+        </properties>
       </component>
-      <component id="e9a75" class="javax.swing.JTextField" binding="tfKA">
+      <component id="e9a75" class="javax.swing.JTextField" binding="tfka">
         <constraints>
           <grid row="13" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-9536887"/>
+        </properties>
       </component>
-      <component id="72d3d" class="javax.swing.JLabel" binding="LuasAlas">
+      <component id="72d3d" class="javax.swing.JLabel" binding="masukkanLA">
         <constraints>
           <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-12828863"/>
+          <foreground color="-1249039"/>
           <text value="LUAS ALAS"/>
         </properties>
       </component>
-      <component id="b1262" class="javax.swing.JLabel" binding="KelAlas">
+      <component id="b1262" class="javax.swing.JLabel" binding="masukkanKA">
         <constraints>
           <grid row="13" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-12828863"/>
+          <foreground color="-1249039"/>
           <text value="KELILING ALAS"/>
+        </properties>
+      </component>
+      <component id="6540a" class="javax.swing.JTextField" binding="tftinggi">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-9536887"/>
+          <font style="1"/>
+          <foreground color="-1773058"/>
         </properties>
       </component>
     </children>
