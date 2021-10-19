@@ -118,7 +118,7 @@ class LuasPermukaan extends MainTigad{
 
         lp = la + (3 * ls );
 
-        System.out.println("Luas Permukaan Limas Segiempat : " + lp);
+        System.out.println("Luas Permukaan Limas Segitiga : " + lp);
         return lp;
     }
 }
