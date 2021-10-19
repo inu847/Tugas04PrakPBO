@@ -4,18 +4,18 @@ import java.awt.event.ActionListener;
 
 
 public class TigaDForm extends JFrame {
-    private JTextField textFieldPanjang;
-    private JTextField textFieldLebar;
-    private JTextField textFieldTinggi;
-    private JTextField textFieldJari;
-    private JTextField textFieldHasil;
-    private JButton HitungButton;
-    private JButton BatalButton;
+    private JTextField tfPanjang;
+    private JTextField tfLebar;
+    private JTextField tfTinggi;
+    private JTextField tfJari;
+    private JTextField tfHasil;
     private JButton HITUNGButton;
     private JButton BATALButton;
     private JButton KELUAR;
     private JPanel GUI3D;
-    private JComboBox dropdown;
+    private JComboBox comboBox1;
+    private JTextField tfSisi;
+    private JLabel sisi;
     private JRadioButton VolRadioButton;
     private JRadioButton LuasPermukaanRadioButton;
     private JLabel Panjang;
@@ -35,12 +35,12 @@ public class TigaDForm extends JFrame {
                 Volume volume = new Volume();
                 LuasPermukaan luasPermukaan = new LuasPermukaan();
 
-                String ops = String.valueOf(dropdown.getSelectedItem());
-                if (ops = "BALOK"){
+                String ops = String.valueOf(comboBox1.getSelectedItem());
+                if (ops == "BALOK"){
                     //luas Permukaan & Volume Balok
-                    double pnj = Double.parseDouble(textFieldPanjang.getText());
-                    double lbr = Double.parseDouble(textFieldLebar.getText());
-                    double tgg = Double.parseDouble(textFieldTinggi.getText());
+                    double pnj = Double.parseDouble(tfPanjang.getText());
+                    double lbr = Double.parseDouble(tfLebar.getText());
+                    double tgg = Double.parseDouble(tfTinggi.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.balok(pnj,lbr,tgg);
                     }
@@ -48,9 +48,9 @@ public class TigaDForm extends JFrame {
                         result = luasPermukaan.balok(pnj,lbr,tgg);
                     }
                 }
-                else if (ops = "KUBUS"){
+                else if (ops == "KUBUS"){
                     //luas Permukaan & Volume Kubus
-                    double sis = Double.parseDouble(textFieldSisi.getText());
+                    double sis = Double.parseDouble(tfSisi.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.kubus(sis);
                     }
@@ -58,9 +58,9 @@ public class TigaDForm extends JFrame {
                         result = luasPermukaan.kubus(sis);
                     }
                 }
-                else if (ops = "BOLA"){
+                else if (ops == "BOLA"){
                     //luas Permukaan & Volume Bola
-                    double jari2 = Double.parseDouble(textFieldJari.getText());
+                    double jari2 = Double.parseDouble(tfJari.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.bola(jari2);
                     }
@@ -68,11 +68,11 @@ public class TigaDForm extends JFrame {
                         result = luasPermukaan.bola(jari2);
                     }
                 }
-                else if (ops = "LIMAS SEGITIGA"){
+                else if (ops == "LIMAS SEGITIGA"){
                     //luas Permukaan & Volume Limas Segitiga
-                    double LA = Double.parseDouble(textFieldLA.getText());
-                    double tgg = Double.parseDouble(textFieldTinggi.getText());
-                    double ls = Double.parseDouble(textFieldSisi.getText());
+                    double LA = Double.parseDouble(tfLA.getText());
+                    double tgg = Double.parseDouble(tfTinggi.getText());
+                    double ls = Double.parseDouble(tfSisi.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.vollimassegitiga(LA,tgg,ls);
                     }
@@ -81,11 +81,11 @@ public class TigaDForm extends JFrame {
                     }
                 }
 
-                else if (ops = "LIMAS SEGIEMPAT"){
+                else if (ops == "LIMAS SEGIEMPAT"){
                     //luas Permukaan & Volume Limas Segiempat
-                    double sis = Double.parseDouble(textFieldSisi.getText());
-                    double LA = Double.parseDouble(textFieldLA.getText());
-                    double t = Double.parseDouble(textFieldTinggi.getText());
+                    double sis = Double.parseDouble(tfSisi.getText());
+                    double LA = Double.parseDouble(tfLA.getText());
+                    double t = Double.parseDouble(tfTinggi.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.vollimassegiempat(LA,t);
                     }
@@ -93,11 +93,11 @@ public class TigaDForm extends JFrame {
                         result = luasPermukaan.luaspermukaanlimassegiempat(sis,LA,t);
                     }
                 }
-                else if (ops = "PRISMA"){
+                else if (ops == "PRISMA"){
                     //luas Permukaan & Volume Prisma
-                    double LA = Double.parseDouble(textFieldLA.getText());
-                    double t = Double.parseDouble(textFieldTinggi.getText());
-                    double KA = Double.parseDouble(textFieldKA.getText());
+                    double LA = Double.parseDouble(tfLA.getText());
+                    double t = Double.parseDouble(tfTinggi.getText());
+                    double KA = Double.parseDouble(tfKA.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.prisma(LA, t);
                     }
@@ -105,10 +105,10 @@ public class TigaDForm extends JFrame {
                         result = luasPermukaan.prisma(LA,KA,t);
                     }
                 }
-                else if (ops = "TABUNG"){
+                else if (ops == "TABUNG"){
                     //luas Permukaan & Volume Tabung
-                    double jari2 = Double.parseDouble(textFieldJari.getText());
-                    double t = Double.parseDouble(textFieldTinggi.getText());
+                    double jari2 = Double.parseDouble(tfJari.getText());
+                    double t = Double.parseDouble(tfTinggi.getText());
                     if (VolRadioButton.isSelected()){
                         result = volume.tabung(jari2, t);
                     }
@@ -116,7 +116,7 @@ public class TigaDForm extends JFrame {
                         result = luasPermukaan.tabung(jari2);
                     }
                 }
-                textFieldHasil.setText(String.valueOf(result));
+                tfHasil.setText(String.valueOf(result));
             }
         });
         BatalButton.addActionListener(new ActionListener() {
@@ -204,6 +204,12 @@ public class TigaDForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+        BATALButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
