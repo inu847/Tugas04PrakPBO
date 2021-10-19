@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class GUI extends JFrame{
     private JPanel mainGui;
@@ -17,6 +19,12 @@ public class GUI extends JFrame{
     private JButton btnBatal;
     private JTextField panjang;
     private JTextField alas;
+    private JLabel masukanJari;
+    private JLabel masukanSisi;
+    private JLabel masukanTinggi;
+    private JLabel masukanLebar;
+    private JLabel masukanPanjang;
+    private JLabel masukanAlas;
 
 
     public GUI() {
@@ -86,37 +94,90 @@ public class GUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 sisi.setEditable(true);
                 tinggi.setEditable(true);
-                lebar.setEditable(true);
                 panjang.setEditable(true);
+                lebar.setEditable(true);
                 alas.setEditable(true);
                 jari.setEditable(true);
+                sisi.setVisible(true);
+                tinggi.setVisible(true);
+                panjang.setVisible(true);
+                lebar.setVisible(true);
+                alas.setVisible(true);
+                jari.setVisible(true);
+                masukanSisi.setVisible(true);
+                masukanTinggi.setVisible(true);
+                masukanPanjang.setVisible(true);
+                masukanLebar.setVisible(true);
+                masukanAlas.setVisible(true);
+                masukanJari.setVisible(true);
                 String ops = String.valueOf(comboBox1.getSelectedItem());
 
                 if (ops == "LINGKARAN") {
                     sisi.setEditable(false);
+                    sisi.setVisible(false);
+                    masukanSisi.setVisible(false);
                     tinggi.setEditable(false);
+                    tinggi.setVisible(false);
+                    masukanTinggi.setVisible(false);
                     lebar.setEditable(false);
+                    lebar.setVisible(false);
+                    masukanLebar.setVisible(false);
                     panjang.setEditable(false);
+                    panjang.setVisible(false);
+                    masukanPanjang.setVisible(false);
                     alas.setEditable(false);
+                    alas.setVisible(false);
+                    masukanAlas.setVisible(false);
                 }else if(ops == "PERSEGI"){
                     jari.setEditable(false);
+                    jari.setVisible(false);
+                    masukanJari.setVisible(false);
                     tinggi.setEditable(false);
+                    tinggi.setVisible(false);
+                    masukanTinggi.setVisible(false);
                     lebar.setEditable(false);
+                    lebar.setVisible(false);
+                    masukanLebar.setVisible(false);
                     panjang.setEditable(false);
+                    panjang.setVisible(false);
+                    masukanPanjang.setVisible(false);
                     alas.setEditable(false);
+                    alas.setVisible(false);
+                    masukanAlas.setVisible(false);
                 }else if(ops == "PERSEGI PANJANG"){
                     jari.setEditable(false);
+                    jari.setVisible(false);
+                    masukanJari.setVisible(false);
                     tinggi.setEditable(false);
+                    tinggi.setVisible(false);
+                    masukanTinggi.setVisible(false);
                     alas.setEditable(false);
+                    alas.setVisible(false);
+                    masukanAlas.setVisible(false);
                     sisi.setEditable(false);
+                    sisi.setVisible(false);
+                    masukanSisi.setVisible(false);
                 }else if(ops == "SEGITIGA SAMA SISI"){
                     jari.setEditable(false);
+                    jari.setVisible(false);
+                    masukanJari.setVisible(false);
                     lebar.setEditable(false);
+                    lebar.setVisible(false);
+                    masukanLebar.setVisible(false);
                     panjang.setEditable(false);
+                    panjang.setVisible(false);
+                    masukanPanjang.setVisible(false);
                 }else if(ops == "SEGITIGA SAMA KAKI"){
                     jari.setEditable(false);
+                    jari.setVisible(false);
+                    masukanJari.setVisible(false);
                     lebar.setEditable(false);
+                    lebar.setVisible(false);
+                    masukanLebar.setVisible(false);
                     panjang.setEditable(false);
+                    panjang.setVisible(false);
+                    masukanPanjang.setVisible(false);
+
                 }
             }
         });
@@ -124,6 +185,26 @@ public class GUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+        mainGui.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                sisi.setEditable(false);
+                tinggi.setEditable(false);
+                lebar.setEditable(false);
+                panjang.setEditable(false);
+                alas.setEditable(false);
+                sisi.setVisible(false);
+                tinggi.setVisible(false);
+                lebar.setVisible(false);
+                panjang.setVisible(false);
+                alas.setVisible(false);
+                masukanSisi.setVisible(false);
+                masukanTinggi.setVisible(false);
+                masukanLebar.setVisible(false);
+                masukanPanjang.setVisible(false);
+                masukanAlas.setVisible(false);
             }
         });
     }

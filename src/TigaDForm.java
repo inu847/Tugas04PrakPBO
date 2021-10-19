@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+<<<<<<< HEAD
 public class TigaDForm extends JFrame {
     private JTextField textFieldPanjang;
     private JTextField textFieldLebar;
@@ -10,6 +11,16 @@ public class TigaDForm extends JFrame {
     private JTextField textFieldHasil;
     private JButton HitungButton;
     private JButton BatalButton;
+=======
+public class TigaDForm {
+    private JTextField tfpanjang;
+    private JTextField tflebar;
+    private JTextField tftinggi;
+    private JTextField tfjari;
+    private JTextField textField5;
+    private JButton HITUNGButton;
+    private JButton BATALButton;
+>>>>>>> c00118dc5f4aa379e6379b65962d4b4bfe1d35fa
     private JButton KELUAR;
     private JPanel GUI3D;
     private JComboBox dropdown;
@@ -188,6 +199,12 @@ public class TigaDForm extends JFrame {
                     textFieldLA.setEditable(false);
                     textFieldKA.setEditable(false);
                 }
+            }
+        });
+        KELUAR.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
         KELUAR.addActionListener(new ActionListener() {
