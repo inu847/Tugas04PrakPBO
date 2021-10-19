@@ -77,7 +77,8 @@ public class GUI extends JFrame{
                         result = luas.segitiga(als, tng);
                     }else if(kelilingRadioButton.isSelected()){
                         double sis = Double.parseDouble(sisi.getText());
-                        result = keliling.segitigaSamaKaki(sis);
+                        double als = Double.parseDouble(alas.getText());
+                        result = keliling.segitigaSamaKaki(sis,als);
                     }
                 }
 
@@ -242,6 +243,48 @@ public class GUI extends JFrame{
                         alas.setEditable(false);
                         alas.setVisible(false);
                         masukanAlas.setVisible(false);
+                        jari.setEditable(false);
+                        jari.setVisible(false);
+                        masukanJari.setVisible(false);
+                        lebar.setEditable(false);
+                        lebar.setVisible(false);
+                        masukanLebar.setVisible(false);
+                        panjang.setEditable(false);
+                        panjang.setVisible(false);
+                        masukanPanjang.setVisible(false);
+                    }
+                    else if (luasRadioButton.isSelected()){
+                        tinggi.setEditable(true);
+                        tinggi.setEditable(true);
+                        masukanTinggi.setVisible(true);
+                        alas.setEditable(true);
+                        alas.setVisible(true);
+                        masukanAlas.setVisible(true);
+                        sisi.setEditable(false);
+                        sisi.setVisible(false);
+                        masukanSisi.setVisible(false);
+                        jari.setEditable(false);
+                        jari.setVisible(false);
+                        masukanJari.setVisible(false);
+                        lebar.setEditable(false);
+                        lebar.setVisible(false);
+                        masukanLebar.setVisible(false);
+                        panjang.setEditable(false);
+                        panjang.setVisible(false);
+                        masukanPanjang.setVisible(false);
+                    }
+                }
+                if(opsi == "SEGITIGA SAMA KAKI"){
+                    if(kelilingRadioButton.isSelected()){
+                        sisi.setEditable(true);
+                        sisi.setVisible(true);
+                        masukanSisi.setVisible(true);
+                        tinggi.setEditable(false);
+                        tinggi.setVisible(false);
+                        masukanTinggi.setVisible(false);
+                        alas.setEditable(true);
+                        alas.setVisible(true);
+                        masukanAlas.setVisible(true);
                         jari.setEditable(false);
                         jari.setVisible(false);
                         masukanJari.setVisible(false);

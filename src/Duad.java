@@ -138,7 +138,7 @@ class Keliling{
         return kel;
     }
 
-    public double segitigaSamaKaki(double s){
+    public double segitigaSamaKaki(double s , double a){
         System.out.println("=== KELILING SEGITIGA Sama Kaki===");
 //        Scanner scanner = new Scanner(System.in);
 
@@ -147,7 +147,7 @@ class Keliling{
 //        System.out.print("Masukkan Panjang Sisi Segitiga : ");
 //        s = scanner.nextInt();
 
-        kel = 3 * s;
+        kel = (2 * s) + a;
 
         System.out.println("Keliling Segitiga : "+kel);
         return kel;
