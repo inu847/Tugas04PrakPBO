@@ -62,7 +62,6 @@ public class GUI extends JFrame{
                         result = keliling.persegiPanjang(pjg, lbr);
                     }
                 }else if(ops == "SEGITIGA SAMA SISI"){
-                    double sis = Double.parseDouble(sisi.getText());
                     if (luasRadioButton.isSelected()){
                         double als = Double.parseDouble(alas.getText());
                         double tng = Double.parseDouble(tinggi.getText());
