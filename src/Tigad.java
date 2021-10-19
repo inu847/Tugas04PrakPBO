@@ -21,10 +21,10 @@ class LuasPermukaan extends MainTigad{
     }
 
     public double kubus(double sisi){
-//        Scanner input = new Scanner (System.in);
+
 
         double permukaan;
-//        sisi = input.nextInt();
+
 
         permukaan = sisi * sisi * 6;
 
