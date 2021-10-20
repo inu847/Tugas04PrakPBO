@@ -209,7 +209,7 @@ public class GUI extends JFrame{
                 masukanAlas.setVisible(false);
             }
         });
-        kelilingRadioButton.addActionListener(new ActionListener() {
+        ActionListener listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String opsi = String.valueOf(comboBox1.getSelectedItem());
@@ -274,7 +274,9 @@ public class GUI extends JFrame{
                     }
                 }
             }
-        });
+        };
+        luasRadioButton.addActionListener(listener);
+        kelilingRadioButton.addActionListener(listener);
     }
 
     public static void main(String[] args) {
